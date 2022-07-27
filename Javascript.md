@@ -266,6 +266,22 @@ switch(expression) {
 
     **For**
 
+```javascript
+const arr = ["apple", "Mango", "Peach"];
+
+for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+}
+```
+
+    **Short for**
+
+```javascript
+const obj = [{ id: 0, name: "apple" }, { id: 1, name: "Mango" }, { id: 2, name: "Peach" }];
+
+for (let data of obj) console.log(data);
+```
+
 **
     For In**
 
@@ -276,5 +292,86 @@ switch(expression) {
 
  **
     Foreach**
+
+
+
+
+
+# JS Tips
+
+#### Check network status
+
+```javascript
+window.addEventListener('offline', (e) => {
+    console.log("⚫");
+});
+
+window.addEventListener('online', (e) => {
+    console.log("⚪");
+});
+```
+
+or 
+
+```javascript
+if (navigator.onLine) {
+    console.log("⚫");
+} else {
+    console.log("⚪");
+}
+```
+
+
+#### Auto complement func
+
+```javascript
+/**
+ * auto complement func
+ * @param {array} arg
+ *
+ */
+```
+
+
+#### Map
+
+```javascript
+let data = new Map();
+data.set('0', { name: 'Jack', age: 26 });
+data.set('1', { name: 'Jira', age: 25 });
+data.set('2', { name: 'Song', age: 24 })
+
+data.forEach((value, key) => {
+	console.log(value);
+});
+
+data.delete('0');
+data.clear();
+```
+
+
+#### String to Number
+
+```javascript
+let num = '0'
+let stringNumber = Number(num);
+
+console.log(typeof num);
+console.log(typeof stringNumber);
+```
+
+
+#### Math Random
+
+```javascript
+let rand = Math.floor(Math.random() * (10 - 0))
+console.log(rand);
+```
+
+
+
+
+
+
 
 ---
